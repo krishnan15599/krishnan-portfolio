@@ -8,37 +8,29 @@ import Link from "next/link";
 const projects = [
     {
         title: "Animora — Anime Chat AI",
-        description: "A Full-Stack Next.js application for immersive AI-driven character conversations. Built a dual-layer caching architecture to minimize LLM token usage and IndexedDB for local state persistence without breaking the fourth wall.",
+        description: "A Full-Stack Next.js application for immersive AI-driven character conversations.",
+        features: [
+            {
+                title: "AI-Powered Chat Integration & Real-time Interaction",
+                content: "Developed a high-performance AI-powered chat platform using Next.js (App Router) and React 19, integrating OpenRouter/Hugging Face APIs to enable real-time, context-aware conversations with AI-driven anime characters."
+            },
+            {
+                title: "Efficient Client-Side Data Persistence",
+                content: "Engineered a robust offline-first message persistence system using IndexedDB (via IDB library), optimizing application performance by reducing server load and ensuring seamless access to chat history across browser sessions."
+            },
+            {
+                title: "Scalable Architecture & Modern UI/UX",
+                content: "Built a visually stunning, responsive interface with Tailwind CSS 4 and Lucide Icons, implementing secure user authentication via Clerk and leveraging Supabase for scalable backend infrastructure and character metadata management."
+            }
+        ],
         icon: Sparkles,
-        image: "/assets/animore-home.png", // Main screenshot used
-        tech: ["Next.js 16", "TypeScript", "OpenRouter (Mistral 7B)", "Supabase", "Clerk", "IndexedDB", "TailwindCSS v4"],
+        image: "/assets/animore-home.png",
+        tech: ["Next.js 16", "TypeScript", "React 19", "OpenRouter", "Supabase", "Clerk", "IndexedDB", "TailwindCSS v4"],
         impact: "Significantly reduced LLM latency and costs via custom server-side JSON caching.",
         color: "from-purple-600 to-pink-600",
         link: "/animora",
-    },
-    {
-        title: "Omnichannel Campaign Manager",
-        description: "Enterprise-grade campaign creation & automation platform for WhatsApp Business, RCS, and Voice.",
-        icon: MessageSquare,
-        tech: ["Angular", "TypeScript", "RxJS", "WebSocket", "Tailwind CSS"],
-        impact: "Powers live multi-business campaigns with reliable delivery visibility.",
-        color: "from-blue-600 to-indigo-600",
-    },
-    {
-        title: "Recharge Wallet & Billing System",
-        description: "Secure wallet recharge flow with integrated payments and compliance.",
-        icon: Wallet,
-        tech: ["Angular", "Reactive Forms", "Razorpay", "API/WebSocket Sync"],
-        impact: "Enables seamless credit top-ups for thousands of daily transactions.",
-        color: "from-emerald-600 to-teal-600",
-    },
-    {
-        title: "Real-time Analytics Dashboards",
-        description: "Live monitoring for chats, campaigns, and performance metrics.",
-        icon: PieChart,
-        tech: ["Angular", "WebSocket", "RxJS Observables", "Responsive Layouts"],
-        impact: "Improved campaign troubleshooting and business decision-making speed.",
-        color: "from-orange-600 to-amber-600",
+        github: "https://github.com/krishnan15599/anime-chat",
+        external: "https://anime-character-seven.vercel.app",
     },
 ];
 
@@ -74,7 +66,7 @@ export function Projects() {
                     </motion.a>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="max-w-4xl mx-auto">
                     {projects.map((project, i) => (
                         <motion.div
                             key={project.title}
@@ -84,7 +76,7 @@ export function Projects() {
                             transition={{ delay: i * 0.1 }}
                             className="h-full group flex flex-col"
                         >
-                            <div className="relative h-full flex flex-col p-8 md:p-10 rounded-3xl glass border border-white/5 hover:border-white/10 transition-all overflow-hidden">
+                            <div className="relative h-full flex flex-col p-8 md:p-12 rounded-3xl glass border border-white/5 hover:border-white/10 transition-all overflow-hidden">
                                 {/* Background Glow */}
                                 <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-[0.03] blur-3xl transition-opacity pointer-events-none`} />
 
@@ -93,26 +85,47 @@ export function Projects() {
                                         <project.icon className="w-8 h-8" />
                                     </div>
                                     <div className="flex gap-4">
-                                        <button className="text-gray-500 hover:text-white transition-colors">
-                                            <Github className="w-5 h-5" />
-                                        </button>
-                                        <button className="text-gray-500 hover:text-white transition-colors">
-                                            <ExternalLink className="w-5 h-5" />
-                                        </button>
+                                        {project.github && (
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+                                                <Github className="w-5 h-5" />
+                                            </a>
+                                        )}
+                                        {project.external && (
+                                            <a href={project.external} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+                                                <ExternalLink className="w-5 h-5" />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
 
-                                <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors z-10">
+                                <h3 className="text-3xl font-bold mb-4 group-hover:text-blue-400 transition-colors z-10">
                                     {project.title}
                                 </h3>
 
-                                <p className="text-gray-400 mb-6 leading-relaxed flex-grow z-10">
+                                <p className="text-gray-400 mb-8 text-lg leading-relaxed z-10">
                                     {project.description}
                                 </p>
 
+                                {/* Features List */}
+                                {project.features && (
+                                    <div className="grid grid-cols-1 gap-6 mb-10 z-10">
+                                        {project.features.map((f, idx) => (
+                                            <div key={idx} className="space-y-2">
+                                                <h4 className="text-base font-bold text-white flex items-center gap-2">
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                                                    {f.title}
+                                                </h4>
+                                                <p className="text-sm text-gray-500 leading-relaxed pl-3.5 border-l border-white/5">
+                                                    {f.content}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
                                 {/* Optional Image Rendering for the Project */}
                                 {project.image && (
-                                    <div className="relative w-full h-48 md:h-56 mb-6 rounded-2xl overflow-hidden border border-white/10 z-10 group-hover:border-white/20 transition-colors">
+                                    <div className="relative w-full h-64 md:h-80 mb-10 rounded-2xl overflow-hidden border border-white/10 z-10 group-hover:border-white/20 transition-colors">
                                         <Image
                                             src={project.image}
                                             alt={`${project.title} preview`}
@@ -122,24 +135,24 @@ export function Projects() {
                                     </div>
                                 )}
 
-                                <div className="flex flex-wrap gap-2 mb-8 mt-auto z-10">
+                                <div className="flex flex-wrap gap-2 mb-10 mt-auto z-10">
                                     {project.tech.map(t => (
-                                        <span key={t} className="px-3 py-1 rounded-full bg-white/5 border border-white/5 text-xs font-semibold text-gray-400">
+                                        <span key={t} className="px-4 py-1.5 rounded-full bg-white/5 border border-white/5 text-xs font-semibold text-gray-400">
                                             {t}
                                         </span>
                                     ))}
                                 </div>
 
                                 <div className="pt-8 border-t border-white/5 z-10">
-                                    <div className="flex items-start gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)] mt-1.5 flex-shrink-0" />
-                                        <span className="text-sm font-medium text-gray-500 group-hover:text-gray-300 transition-colors leading-relaxed">
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)] mt-1.5 flex-shrink-0" />
+                                        <span className="text-base font-medium text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
                                             {project.impact}
                                         </span>
                                     </div>
-                                    {(project as any).link && (
-                                        <div className="mt-6 flex justify-end">
-                                            <Link href={(project as any).link} className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-purple-400 group-hover:text-purple-400 transition-colors">
+                                    {project.link && (
+                                        <div className="mt-8 flex justify-end">
+                                            <Link href={project.link} className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-purple-400 group-hover:text-purple-400 transition-colors">
                                                 View Case Study <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                             </Link>
                                         </div>

@@ -26,7 +26,7 @@ export function About() {
 
                         <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
                             <p>
-                                I'm a frontend engineer passionate about building scalable, user-centric products in high-stakes SaaS environments. At <span className="text-white">Msgkart</span>, I develop omnichannel communication platforms that power WhatsApp Business, RCS messaging, and real-time analytics.
+                                I'm a software engineer passionate about building scalable, user-centric products in high-stakes SaaS environments. At <span className="text-white">Msgkart</span>, I develop omnichannel communication platforms that power WhatsApp Business, RCS messaging, and real-time analytics.
                             </p>
                             <p>
                                 With strong roots in Angular & TypeScript, I create maintainable component architectures, real-time WebSocket UIs, and performance-optimized flows.

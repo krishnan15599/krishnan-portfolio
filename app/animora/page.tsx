@@ -41,9 +41,23 @@ export default function AnimoraProject() {
                         </div>
 
                         <div className="flex gap-4">
-                            <a href="https://github.com" target="_blank" className="px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 flex items-center gap-2 font-medium transition-colors">
+                            <a
+                                href="https://github.com/krishnan15599/anime-chat"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 flex items-center gap-2 font-medium transition-colors"
+                            >
                                 <Github className="w-5 h-5" />
                                 Source Code
+                            </a>
+                            <a
+                                href="https://anime-character-seven.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 flex items-center gap-2 font-medium transition-colors shadow-lg shadow-purple-600/20"
+                            >
+                                <ExternalLink className="w-5 h-5" />
+                                Live Demo
                             </a>
                         </div>
                     </motion.div>

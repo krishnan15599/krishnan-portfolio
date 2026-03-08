@@ -23,7 +23,7 @@ export function Contact() {
                             </motion.h2>
 
                             <p className="text-xl text-gray-400 mb-12 leading-relaxed">
-                                I'm open to frontend roles in SaaS/product companies, especially Angular-heavy stacks or real-time platforms.
+                                I'm open to software engineering roles in SaaS/product companies, especially Angular-heavy stacks or real-time platforms.
                             </p>
 
                             <div className="space-y-6">
@@ -50,12 +50,14 @@ export function Contact() {
 
                             <div className="mt-12 flex gap-4">
                                 {[
-                                    { icon: Linkedin, href: "#", color: "hover:bg-blue-600" },
-                                    { icon: Github, href: "#", color: "hover:bg-gray-800" },
+                                    { icon: Linkedin, href: "https://www.linkedin.com/in/krishnan-k-a2bb4a17b/", color: "hover:bg-blue-600" },
+                                    { icon: Github, href: "https://github.com/krishnan15599", color: "hover:bg-gray-800" },
                                 ].map((social, i) => (
                                     <motion.a
                                         key={i}
                                         href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         initial={{ opacity: 0, y: 10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}

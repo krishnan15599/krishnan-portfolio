@@ -5,7 +5,7 @@ import { Code2, Globe, Wrench, Layout } from "lucide-react";
 
 const skillGroups = [
     {
-        title: "Core Frontend",
+        title: "Core Engineering",
         icon: Layout,
         skills: ["Angular", "React", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3/SCSS", "Tailwind CSS", "RxJS"],
     },
@@ -42,7 +42,7 @@ export function Skills() {
                         Tech Stack & <span className="text-blue-500">Competencies</span>
                     </motion.h2>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                        A specialized toolkit for modern enterprise-grade frontend engineering.
+                        A specialized toolkit for modern enterprise-grade software engineering.
                     </p>
                 </div>
 

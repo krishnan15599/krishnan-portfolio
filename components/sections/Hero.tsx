@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, Github, Linkedin, ExternalLink } from "lucide-react";
+import { ArrowDown, Mail, Github, Linkedin, ExternalLink, FileText } from "lucide-react";
 
 export function Hero() {
     return (
@@ -33,7 +33,7 @@ export function Hero() {
                     </h1>
 
                     <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto font-medium mb-12 leading-relaxed">
-                        Frontend Engineer <span className="text-blue-500">|</span> Building Scalable SaaS Experiences
+                        Software Engineer <span className="text-blue-500">|</span> Building Scalable SaaS Experiences
                     </p>
 
                     <p className="text-lg text-gray-500 max-w-3xl mx-auto mb-16 leading-relaxed">
@@ -53,10 +53,21 @@ export function Hero() {
                         </motion.a>
 
                         <motion.a
-                            href="#contact"
+                            href="/Krishnan_K.pdf"
+                            target="_blank"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="px-8 py-4 rounded-full glass font-bold flex items-center gap-2 transition-all"
+                        >
+                            Resume
+                            <FileText className="w-4 h-4" />
+                        </motion.a>
+
+                        <motion.a
+                            href="#contact"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="px-8 py-4 rounded-full glass font-bold flex items-center gap-2 transition-all opacity-80 hover:opacity-100"
                         >
                             Get in Touch
                             <Mail className="w-4 h-4" />

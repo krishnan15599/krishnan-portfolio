@@ -5,7 +5,7 @@ import { Briefcase, Building2, MapPin, Calendar, CheckCircle2 } from "lucide-rea
 
 const experiences = [
     {
-        role: "Frontend Engineer",
+        role: "Software Engineer",
         company: "Msgkart",
         location: "Bengaluru",
         date: "Dec 2024 – Present",
@@ -13,12 +13,13 @@ const experiences = [
             "Engineered Campaign Manager for WhatsApp, RCS & Voice — including scheduling, rechurn logic, credit consumption, and multi-channel workflows used daily by live clients.",
             "Built full Recharge Wallet system with real-time GST calculation, dynamic pricing, Razorpay integration, and secure transaction flows.",
             "Developed real-time Chat & Campaign Monitoring Dashboards powered by WebSockets for instant delivery/CTR/failure insights.",
-            "Designed & implemented Chatbot Flow Builder, Media Manager, and a reusable Angular component library — accelerating feature delivery across the product.",
+            "Designed and implemented advanced WhatsApp and RCS Flowbuilders using DrawFlow, enabling node-based messaging automation and complex customer journey mapping.",
+            "Developed a Media Manager and a reusable Angular component library — accelerating feature delivery and ensuring UI consistency across the platform.",
             "Collaborated in Agile sprints: planning, reviews, retros, and cross-team coordination for scalable SaaS architecture.",
         ],
     },
     {
-        role: "Frontend Developer",
+        role: "Software Engineer",
         company: "Propass",
         location: "Coimbatore",
         date: "Nov 2023 – Nov 2024",
