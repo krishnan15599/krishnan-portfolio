@@ -29,7 +29,7 @@ const skillGroups = [
 export function Skills() {
     return (
         <section id="skills" className="py-24 relative overflow-hidden">
-            <div className="absolute top-1/2 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
+            {/* No extra background blobs */}
 
             <div className="max-w-7xl mx-auto px-4">
                 <div className="mb-20 text-center">
@@ -37,11 +37,11 @@ export function Skills() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-black mb-6"
+                        className="text-4xl md:text-5xl font-black mb-6 text-[#f1f5f9]"
                     >
-                        Tech Stack & <span className="text-blue-500">Competencies</span>
+                        Tech Stack & <span className="text-indigo-500">Competencies</span>
                     </motion.h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-[#94a3b8] text-lg max-w-2xl mx-auto">
                         A specialized toolkit for modern enterprise-grade software engineering.
                     </p>
                 </div>
@@ -54,20 +54,20 @@ export function Skills() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="p-8 rounded-3xl glass border border-white/5 hover:border-blue-500/20 transition-all group"
+                            className="p-8 rounded-3xl bg-[#1e293b] border border-slate-700 hover:border-indigo-500/30 shadow-xl transition-all group"
                         >
                             <div className="flex items-center gap-4 mb-8">
-                                <div className="p-3 rounded-2xl bg-blue-600/10 text-blue-400 group-hover:bg-blue-600 transition-colors group-hover:text-white">
+                                <div className="p-3 rounded-2xl bg-indigo-600/10 text-indigo-400 group-hover:bg-indigo-600 transition-colors group-hover:text-white">
                                     <group.icon className="w-5 h-5" />
                                 </div>
-                                <h3 className="font-bold text-lg text-white group-hover:text-blue-400 transition-colors">
+                                <h3 className="font-bold text-lg text-[#f1f5f9] group-hover:text-indigo-400 transition-colors">
                                     {group.title}
                                 </h3>
                             </div>
 
                             <div className="flex flex-wrap gap-2">
                                 {group.skills.map(skill => (
-                                    <span key={skill} className="px-3 py-1.5 rounded-xl bg-white/5 border border-white/5 text-sm text-gray-400 hover:text-white hover:bg-white/10 transition-all cursor-default">
+                                    <span key={skill} className="px-3 py-1.5 rounded-xl bg-slate-800 text-[#94a3b8] hover:text-[#f1f5f9] hover:bg-slate-700 transition-all cursor-default border border-slate-700">
                                         {skill}
                                     </span>
                                 ))}

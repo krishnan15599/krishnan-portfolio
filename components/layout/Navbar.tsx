@@ -31,7 +31,7 @@ export function Navbar() {
         <nav
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 py-4",
-                isScrolled ? "bg-gray-950/80 backdrop-blur-md border-b border-white/5 py-4" : "bg-transparent py-6"
+                isScrolled ? "bg-slate-900/90 backdrop-blur-md border-b border-white/5 py-4" : "bg-transparent py-6"
             )}
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -40,13 +40,11 @@ export function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                 >
                     <Link href="/" className="flex items-center gap-2">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center p-[1px]">
-                            <div className="w-full h-full bg-gray-950 rounded-[11px] flex items-center justify-center">
-                                <Rocket className="w-5 h-5 text-blue-400" />
-                            </div>
+                        <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center">
+                            <Rocket className="w-5 h-5 text-white" />
                         </div>
                         <span className="text-xl font-bold tracking-tight text-white">
-                            Krishnan<span className="text-blue-500">.</span>
+                            Krishnan<span className="text-indigo-500">.</span>
                         </span>
                     </Link>
                 </motion.div>

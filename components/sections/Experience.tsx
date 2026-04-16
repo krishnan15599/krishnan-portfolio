@@ -52,8 +52,8 @@ export function Experience() {
                         viewport={{ once: true }}
                         className="flex flex-col items-center text-center"
                     >
-                        <h2 className="text-4xl md:text-5xl font-black mb-4">Professional <span className="text-blue-500">Journey</span></h2>
-                        <p className="text-gray-400 text-lg max-w-2xl">Building high-performance enterprise applications and scalable SaaS solutions.</p>
+                        <h2 className="text-4xl md:text-5xl font-black mb-4 text-[#f1f5f9]">Professional <span className="text-indigo-500">Journey</span></h2>
+                        <p className="text-[#94a3b8] text-lg max-w-2xl">Building high-performance enterprise applications and scalable SaaS solutions.</p>
                     </motion.div>
                 </div>
 
@@ -65,21 +65,20 @@ export function Experience() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="relative p-8 md:p-12 glass rounded-3xl border border-white/5 hover:border-blue-500/20 transition-colors group overflow-hidden"
+                            className="relative p-8 md:p-12 bg-[#1e293b] rounded-3xl border border-slate-700 hover:border-indigo-500/30 shadow-xl transition-all group overflow-hidden"
                         >
-                            {/* Background accent */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 rounded-bl-3xl -translate-y-4 translate-x-4 blur-3xl group-hover:bg-blue-600/10 transition-colors" />
+                            {/* No background accent blobs */}
 
                             <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12">
                                 <div>
                                     <div className="flex items-center gap-3 mb-4">
-                                        <div className="p-3 rounded-xl bg-blue-600/10 text-blue-400">
+                                        <div className="p-3 rounded-xl bg-indigo-600/10 text-indigo-400">
                                             <Briefcase className="w-6 h-6" />
                                         </div>
-                                        <h3 className="text-2xl font-bold text-white">{exp.role}</h3>
+                                        <h3 className="text-2xl font-bold text-[#f1f5f9]">{exp.role}</h3>
                                     </div>
 
-                                    <div className="space-y-3 text-gray-500 font-medium">
+                                    <div className="space-y-3 text-[#94a3b8] font-medium">
                                         <div className="flex items-center gap-2">
                                             <Building2 className="w-4 h-4" />
                                             <span>{exp.company}</span>
@@ -104,10 +103,10 @@ export function Experience() {
                                                 whileInView={{ opacity: 1, x: 0 }}
                                                 viewport={{ once: true }}
                                                 transition={{ delay: (i * 0.1) + (j * 0.05) }}
-                                                className="flex items-start gap-4 text-gray-400 group/item"
+                                                className="flex items-start gap-4 text-[#94a3b8] group/item"
                                             >
-                                                <CheckCircle2 className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0 opacity-0 group-hover/item:opacity-100 transition-opacity" />
-                                                <span className="leading-relaxed group-hover/item:text-white transition-colors">{point}</span>
+                                                <CheckCircle2 className="w-5 h-5 text-indigo-500 mt-1 flex-shrink-0 opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                                                <span className="leading-relaxed group-hover/item:text-[#f1f5f9] transition-colors">{point}</span>
                                             </motion.li>
                                         ))}
                                     </ul>

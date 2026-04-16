@@ -9,7 +9,8 @@ export function Contact() {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="p-8 md:p-16 rounded-[3rem] glass border border-white/5 relative overflow-hidden">
                     {/* Background Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-purple-600/10 pointer-events-none" />
+                    {/* No extra background gradient flares */}
+                    <div className="absolute inset-0 bg-slate-800/20 pointer-events-none" />
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
                         <div>
@@ -28,29 +29,29 @@ export function Contact() {
 
                             <div className="space-y-6">
                                 <a href="mailto:Krishnan15599@gmail.com" className="flex items-center gap-6 group">
-                                    <div className="p-4 rounded-2xl bg-white/5 border border-white/5 text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                    <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/50 text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all">
                                         <Mail className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <div className="text-sm text-gray-500 uppercase font-bold tracking-widest mb-1">Email Me</div>
-                                        <div className="text-lg font-medium text-white group-hover:text-blue-400 transition-colors">Krishnan15599@gmail.com</div>
+                                        <div className="text-sm text-[#94a3b8] uppercase font-bold tracking-widest mb-1">Email Me</div>
+                                        <div className="text-lg font-medium text-[#f1f5f9] group-hover:text-indigo-400 transition-colors">Krishnan15599@gmail.com</div>
                                     </div>
                                 </a>
 
                                 <a href="tel:+919994094528" className="flex items-center gap-6 group">
-                                    <div className="p-4 rounded-2xl bg-white/5 border border-white/5 text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                    <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/50 text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all">
                                         <Phone className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <div className="text-sm text-gray-500 uppercase font-bold tracking-widest mb-1">Call Me</div>
-                                        <div className="text-lg font-medium text-white group-hover:text-blue-400 transition-colors">+91 99940 94528</div>
+                                        <div className="text-sm text-[#94a3b8] uppercase font-bold tracking-widest mb-1">Call Me</div>
+                                        <div className="text-lg font-medium text-[#f1f5f9] group-hover:text-indigo-400 transition-colors">+91 99940 94528</div>
                                     </div>
                                 </a>
                             </div>
 
                             <div className="mt-12 flex gap-4">
                                 {[
-                                    { icon: Linkedin, href: "https://www.linkedin.com/in/krishnan-k-a2bb4a17b/", color: "hover:bg-blue-600" },
+                                    { icon: Linkedin, href: "https://www.linkedin.com/in/krishnan-k-a2bb4a17b/", color: "hover:bg-indigo-600" },
                                     { icon: Github, href: "https://github.com/krishnan15599", color: "hover:bg-gray-800" },
                                 ].map((social, i) => (
                                     <motion.a
@@ -78,22 +79,22 @@ export function Contact() {
                             <form className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-gray-400 ml-1">Name</label>
-                                        <input type="text" placeholder="John Doe" className="w-full p-4 rounded-2xl bg-white/5 border border-white/5 focus:border-blue-500/50 outline-none focus:ring-1 focus:ring-blue-500/20 transition-all text-white" />
+                                        <label className="text-sm font-semibold text-[#94a3b8] ml-1">Name</label>
+                                        <input type="text" placeholder="John Doe" className="w-full p-4 rounded-2xl bg-slate-900/50 border border-slate-700/50 focus:border-indigo-500/50 outline-none focus:ring-1 focus:ring-indigo-500/20 transition-all text-[#f1f5f9]" />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-gray-400 ml-1">Email</label>
-                                        <input type="email" placeholder="john@example.com" className="w-full p-4 rounded-2xl bg-white/5 border border-white/5 focus:border-blue-500/50 outline-none focus:ring-1 focus:ring-blue-500/20 transition-all text-white" />
+                                        <label className="text-sm font-semibold text-[#94a3b8] ml-1">Email</label>
+                                        <input type="email" placeholder="john@example.com" className="w-full p-4 rounded-2xl bg-slate-900/50 border border-slate-700/50 focus:border-indigo-500/50 outline-none focus:ring-1 focus:ring-indigo-500/20 transition-all text-[#f1f5f9]" />
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-semibold text-gray-400 ml-1">Message</label>
-                                    <textarea placeholder="Hi Krishnan, I'd like to talk about..." rows={5} className="w-full p-4 rounded-2xl bg-white/5 border border-white/5 focus:border-blue-500/50 outline-none focus:ring-1 focus:ring-blue-500/20 transition-all text-white resize-none" />
+                                    <label className="text-sm font-semibold text-[#94a3b8] ml-1">Message</label>
+                                    <textarea placeholder="Hi Krishnan, I'd like to talk about..." rows={5} className="w-full p-4 rounded-2xl bg-slate-900/50 border border-slate-700/50 focus:border-indigo-500/50 outline-none focus:ring-1 focus:ring-indigo-500/20 transition-all text-[#f1f5f9] resize-none" />
                                 </div>
-                                <button className="w-full py-5 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold flex items-center justify-center gap-2 transition-all group overflow-hidden relative shadow-lg shadow-blue-600/20">
+                                <button className="w-full py-5 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold flex items-center justify-center gap-2 transition-all group overflow-hidden relative shadow-lg shadow-indigo-600/20 border border-indigo-400/20">
                                     <span className="relative z-10">Send Message</span>
                                     <Send className="w-5 h-5 relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                                    <div className="absolute inset-0 bg-indigo-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                                 </button>
                             </form>
                         </motion.div>

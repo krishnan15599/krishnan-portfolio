@@ -20,13 +20,13 @@ export function About() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-extrabold mb-8 leading-tight">
-                            Hey, I'm Krishnan — turning complex SaaS requirements into <span className="text-blue-500">intuitive solutions</span>.
+                        <h2 className="text-3xl md:text-5xl font-extrabold mb-8 leading-tight text-[#f1f5f9]">
+                            Hey, I'm Krishnan — turning complex SaaS requirements into <span className="text-indigo-400">intuitive solutions</span>.
                         </h2>
 
-                        <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
+                        <div className="space-y-6 text-[#94a3b8] text-lg leading-relaxed">
                             <p>
-                                I'm a software engineer passionate about building scalable, user-centric products in high-stakes SaaS environments. At <span className="text-white">Msgkart</span>, I develop omnichannel communication platforms that power WhatsApp Business, RCS messaging, and real-time analytics.
+                                I'm a software engineer passionate about building scalable, user-centric products in high-stakes SaaS environments. At <span className="text-[#f1f5f9]">Msgkart</span>, I develop omnichannel communication platforms that power WhatsApp Business, RCS messaging, and real-time analytics.
                             </p>
                             <p>
                                 With strong roots in Angular & TypeScript, I create maintainable component architectures, real-time WebSocket UIs, and performance-optimized flows.
@@ -44,11 +44,11 @@ export function About() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="p-6 rounded-2xl glass flex flex-col items-center text-center"
+                                    className="p-6 rounded-2xl bg-[#1e293b] border border-slate-700 shadow-xl flex flex-col items-center text-center group hover:border-indigo-500/30 transition-all"
                                 >
-                                    <stat.icon className="w-6 h-6 text-blue-400 mb-3" />
-                                    <span className="text-xl font-bold text-white mb-1">{stat.value}</span>
-                                    <span className="text-xs text-gray-500 uppercase tracking-wider">{stat.label}</span>
+                                    <stat.icon className="w-6 h-6 text-indigo-400 mb-3 group-hover:scale-110 transition-transform" />
+                                    <span className="text-xl font-bold text-[#f1f5f9] mb-1">{stat.value}</span>
+                                    <span className="text-xs text-[#94a3b8] uppercase tracking-wider">{stat.label}</span>
                                 </motion.div>
                             ))}
                         </div>
@@ -62,10 +62,10 @@ export function About() {
                         className="relative"
                     >
                         <div className="aspect-square rounded-3xl overflow-hidden glass relative group">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-purple-600/20 z-0" />
+                            <div className="absolute inset-0 bg-slate-800/20 z-0" />
                             <div className="h-full w-full flex items-center justify-center relative z-10 p-12">
                                 {/* This would be an image, using a placeholder icon for now or I can generate something */}
-                                <Sparkles className="w-32 h-32 text-blue-500/40 animate-pulse" />
+                                <Sparkles className="w-32 h-32 text-indigo-500/20" />
                             </div>
 
                             {/* Floating elements */}
